@@ -1,1 +1,0 @@
-resultado_total_HC

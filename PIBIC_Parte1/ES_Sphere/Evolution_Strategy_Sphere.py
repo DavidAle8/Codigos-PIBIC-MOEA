@@ -1,5 +1,5 @@
 import random
-from Códigos_PIBIC.PIBIC_Parte1 import Sphere
+from PIBIC_Parte1 import Sphere
 from copy import deepcopy
 
 Lista = []
@@ -8,9 +8,7 @@ Lista_func_objetivo = []
 maximo = 100.0
 minimo = -100.0
 
-
 class Individuo:
-
 
     def __init__(self, genoma, fitness):
 
@@ -103,7 +101,7 @@ def evolution_strategy(populacao, pais, filhos, p, r, interacoes):
             for _ in range(filhos//pais):
 
                 novo_individuo = deepcopy(individuo_apto)
-                individuo_apto.mutation(p, r)
+                novo_individuo.mutation(p, r)
                 populacao.append(novo_individuo)
 
         acc+=1
